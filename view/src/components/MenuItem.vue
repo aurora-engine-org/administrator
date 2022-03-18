@@ -4,7 +4,7 @@
 
 <script>
 
-import MenuNav from "@/components/MenuNav";
+import MenuNav from "@/components/TreeMenu";
 export default {
   name: "MenuIter",
   component:MenuNav,

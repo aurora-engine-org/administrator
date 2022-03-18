@@ -1,81 +1,37 @@
 <template>
-  <MenuNav :menus="menus">
-
-  </MenuNav>
+<!-- 页面布局 -->
+  <HeaderComponent></HeaderComponent>
+  <MainComponent></MainComponent>
+  <FooterComponent></FooterComponent>
 </template>
 
 <script>
-import MenuNav from "@/components/MenuNav";
+import HeaderComponent from "@/components/HeaderComponent";
+import FooterComponent from "@/components/FooterComponent";
+import MainComponent from "@/components/MainComponent";
 
 export default {
   name: 'App',
   components: {
-    MenuNav,
+    HeaderComponent,
+    MainComponent,
+    FooterComponent,
   },
-  data(){
-    return{
-      menus:[
-        {
-          title:"1",
-          isOpen:false,
-          child:[
-            {
-              title:"1-1",
-              isOpen:false,
-              child:[
-                {
-                  title:"1-1-1",
-                  isOpen:false,
-                  child:[]
-                },
-              ]
-            }
-          ]
-        },
-        {
-          title:"2",
-          isOpen:false,
-          child:[
-            {
-              title:"2-1",
-              isOpen:false,
-              child:[]
-            },
-            {
-              title:"2-2",
-              isOpen:false,
-              child:[]
-            },
-            {
-              title:"2-3",
-              isOpen:false,
-              child:[]
-            }
-          ]
-        },
-        {
-          title:"3",
-          isOpen:false,
-          child:[
-            {
-              title:"3-1",
-              child:[]
-            }
-          ]
-        },
-      ]
-    }
-  }
+
 }
 </script>
 
 <style>
+*{
+  margin: 0;
+  padding: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
 }
 </style>
