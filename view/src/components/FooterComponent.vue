@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
 .footer{
-  height: 5vh;
+  height: 50px;
   background-color: black;
 }
 </style>

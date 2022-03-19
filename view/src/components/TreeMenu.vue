@@ -4,6 +4,13 @@
 -->
   <div class="menu" v-for="(menu,index) in menus" :key="menu" @click="closeAll(index)">
     <div class="menu-title" @click="menu.isOpen=!menu.isOpen">{{menu.title}}</div>
+    <div v-if="menu.isOpen">
+      <div class="item" v-for="item in menu.items" :key="item">
+        <div class="item-title">
+          {{item}}
+        </div>
+      </div>
+    </div>
     <TreeMenu v-if="menu.isOpen" :menus="menu.child"></TreeMenu>
   </div>
 
@@ -37,7 +44,17 @@ export default {
 .menu{
 }
 .menu-title{
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   user-select: none;
   background-color: darkgrey;
+}
+.item{
+  background-color: antiquewhite;
+}
+.item-title{
+  margin-left: 10px;
 }
 </style>

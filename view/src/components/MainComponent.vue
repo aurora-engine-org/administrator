@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 .main{
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   overflow: auto;
