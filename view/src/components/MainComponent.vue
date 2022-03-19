@@ -1,6 +1,6 @@
 <template>
  <div class="main">
-    <LeftSidebar></LeftSidebar>
+    <LeftMenuBar title='Menu' :menus="menus"></LeftMenuBar>
     <WindowViews></WindowViews>
  </div>
 </template>
@@ -8,15 +8,74 @@
 <script>
 
 
-import LeftSidebar from "@/components/LeftSidebar";
+import LeftMenuBar from "@/components/LeftMenuBar";
 import WindowViews from "@/components/WindowViews";
 
 export default {
   name: "MainComponent",
   components:{
-    LeftSidebar,
+    LeftMenuBar,
     WindowViews,
   },
+  data(){
+    return{
+      menus:  [
+        {
+          title:"1",
+          isOpen:false,
+          items:[
+            'aaa',
+            'bbb',
+            'ccc'
+          ],
+          child:[
+            {
+              title:"1-1",
+              isOpen:false,
+              items:[
+                'ddd',
+                'eee',
+                'fff'
+              ],
+              child:[
+                {
+                  title:"1-1-1",
+                  isOpen:false,
+                  items:[
+                    'ggg',
+                    'hhh',
+                    'iii'
+                  ],
+                  child:[]
+                },
+              ]
+            }
+          ]
+        },
+        {
+          title:"2",
+          isOpen:false,
+          items:[
+            'jjj',
+            'kkk',
+            'lll'
+          ],
+          child:[
+            {
+              title:"2-1",
+              isOpen:false,
+              items:[
+                'mmm',
+                'nnn',
+                'ooo'
+              ],
+              child:[]
+            }
+          ]
+        },
+      ]
+    }
+  }
 }
 </script>
 

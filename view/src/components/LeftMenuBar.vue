@@ -1,6 +1,6 @@
 <template>
-  <div class="left-sidebar">
-    <h1>Menu</h1>
+  <div class="left-menu">
+    <div class="left-menu-tile">{{title}}</div>
     <TreeMenu @close-all="close" :menus="menus"></TreeMenu>
   </div>
 </template>
@@ -9,41 +9,13 @@
 import TreeMenu from "@/components/TreeMenu";
 
 export default {
-  name: "LeftSidebar",
+  name: "LeftMenuBar",
+  props:['title','menus'],
   components:{
     TreeMenu,
   },
   data(){
     return{
-      menus:  [
-        {
-          title:"1",
-          isOpen:false,
-          items:[
-            'aaa',
-            'bbb',
-            'ccc'
-          ],
-          child:[
-            {
-              title:"1-1",
-              isOpen:false,
-              child:[
-                {
-                  title:"1-1-1",
-                  isOpen:false,
-                  items:[
-                    'ddd',
-                    'eee',
-                    'fff'
-                  ],
-                  child:[]
-                },
-              ]
-            }
-          ]
-        },
-      ]
     }
   },
   methods: {
@@ -71,9 +43,18 @@ export default {
 
 <style scoped>
 
-.left-sidebar{
+.left-menu{
   width: 10vw;
-  background-color: #e3e3e3;
+  background-color: white;
   overflow: auto;
+}
+.left-menu-tile{
+  height: 40px;
+  background-color: white;
+  user-select: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 </style>
