@@ -1,12 +1,19 @@
 <template>
   <div class="window-labe">
-    labe
+    <div>
+      labe
+    </div>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: "WindowLabe"
+  name: "WindowLabe",
+  props:['title','name'],
+  methods:{
+
+  },
 }
 </script>
 

@@ -15,11 +15,9 @@
     <div v-if="menu.isOpen">
       <!--  当前菜单选项    -->
       <div class="item" v-for="item in menu.items" :key="item">
-
-        <div class="item-title">
+        <div class="item-title" @click="openMenu(item)">
           {{item}}
         </div>
-
       </div>
 
       <div class="child-menu"  v-if="menu.isOpen">
@@ -48,6 +46,10 @@ export default {
       //抛出 需要关闭的菜单项
       this.$emit('close-all',index)
     },
+    //点击对应菜单选项 打开选项面板
+    openMenu(item){
+      this.$router.push({name:item})
+    },
   },
 }
 
@@ -65,7 +67,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   user-select: none;
-  background-color: forestgreen;
+  background-color: #339c6b;
 
 }
 

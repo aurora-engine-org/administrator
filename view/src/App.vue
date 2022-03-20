@@ -1,21 +1,12 @@
 <template>
-<!-- 页面布局 -->
-  <HeaderComponent></HeaderComponent>
-  <MainComponent></MainComponent>
-  <FooterComponent></FooterComponent>
+  <router-view></router-view>
 </template>
 
 <script>
-import HeaderComponent from "@/components/HeaderComponent";
-import FooterComponent from "@/components/FooterComponent";
-import MainComponent from "@/components/MainComponent";
-
 export default {
   name: 'App',
   components: {
-    HeaderComponent,
-    MainComponent,
-    FooterComponent,
+
   },
 
 }
