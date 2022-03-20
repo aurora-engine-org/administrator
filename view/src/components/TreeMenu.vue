@@ -57,7 +57,7 @@ export default {
 
 <style scoped>
 .menu{
-  background-color: forestgreen;
+
 }
 .menu-title{
   height: 40px;
@@ -75,13 +75,16 @@ export default {
   flex-direction: column;
   justify-content: center;
   background-color: #42b983;
+  padding-left: 10px;
 }
 .item-title{
   user-select: none;
 
 }
-.child-menu{
+.item-title>div{
 
+}
+.child-menu{
 }
 
 .fade-enter-active,

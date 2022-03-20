@@ -21,13 +21,16 @@ export default {
     return{
       menus:  [
         {
+          //顶层菜单名
           title:"1",
           isOpen:false,
+          //菜单选项
           items:[
-            'aaa',
+            'test',
             'bbb',
             'ccc'
           ],
+          //子菜单
           child:[
             {
               title:"1-1",
@@ -49,27 +52,6 @@ export default {
                   child:[]
                 },
               ]
-            }
-          ]
-        },
-        {
-          title:"2",
-          isOpen:false,
-          items:[
-            'jjj',
-            'kkk',
-            'lll'
-          ],
-          child:[
-            {
-              title:"2-1",
-              isOpen:false,
-              items:[
-                'mmm',
-                'nnn',
-                'ooo'
-              ],
-              child:[]
             }
           ]
         },
