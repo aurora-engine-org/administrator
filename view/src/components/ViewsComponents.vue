@@ -12,5 +12,7 @@ export default {
 </script>
 
 <style scoped>
-
+.views{
+  overflow: auto;
+}
 </style>

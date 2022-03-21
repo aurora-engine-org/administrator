@@ -94,7 +94,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   background-color: #339c6b;
-  padding-left: 10px;
+
 }
 .item-title{
   padding-left: 20px;
