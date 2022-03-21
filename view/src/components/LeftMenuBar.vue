@@ -1,7 +1,7 @@
 <template>
   <div class="left-menu">
     <div class="left-menu-tile">{{title}}</div>
-    <TreeMenu @addwindow="addWindowLabel" :menus="menus" :windowLabels="windowLabels"></TreeMenu>
+    <TreeMenu :menus="menus" :windowLabels="windowLabels"></TreeMenu>
   </div>
 </template>
 

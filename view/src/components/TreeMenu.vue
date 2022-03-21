@@ -34,6 +34,9 @@
 export default {
   name: "TreeMenu",
   props:['menus','windowLabels'],
+  components:{
+
+  },
   data(){
     return{
 
@@ -56,14 +59,13 @@ export default {
         }
       }
     },
-
     //点击对应菜单选项 打开选项面板
     openMenu(item){
-      this.$router.push({name:item})
+      this.$router.push("/admin/"+item)
     },
     addWindowsLabels(item){
-      console.log("addWindowsLabels:"+item)
-      this.$emit('addwindow',item)
+      //通过消息总线 传递给窗口标签组件创建一个标签
+      this.$bus.emit('addwindow',item)
     }
   },
 }
@@ -82,7 +84,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   user-select: none;
-  background-color: #339c6b;
+  background-color: #42b983;
 
 }
 
@@ -91,12 +93,12 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #42b983;
+  background-color: #339c6b;
   padding-left: 10px;
 }
 .item-title{
+  padding-left: 20px;
   user-select: none;
-
 }
 .item-title>div{
 

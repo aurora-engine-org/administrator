@@ -13,7 +13,17 @@ const routes = [
                 path:'test',
                 name:'test',
                 component:()=>import("@/views/TestView")
-            }
+            },
+            {
+                path:'404',
+                name: 'not-found',
+                component:()=>import('@/components/NotFound')
+            },
+            {
+                path: "/admin/:pathMatch(.*)",
+                redirect:'404',
+                component:()=>import('@/components/NotFound')
+            },
         ],
     }
 ]

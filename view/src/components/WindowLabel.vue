@@ -1,5 +1,5 @@
 <template>
-  <div class="window-labe">
+  <div class="window-label">
     <div>
       {{title}}
     </div>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "WindowLabe",
+  name: "WindowLabel",
   props:['title','name'],
   methods:{
 
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-.window-labe{
+.window-label{
   width: 100px;
   height: 40px;
   background-color: #907fff;
