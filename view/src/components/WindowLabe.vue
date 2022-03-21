@@ -3,7 +3,6 @@
     <div>
       labe
     </div>
-
   </div>
 </template>
 
