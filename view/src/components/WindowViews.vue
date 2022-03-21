@@ -1,7 +1,7 @@
 <template>
   <div class="window-views">
     <WindowBar></WindowBar>
-    <ViewsComponents></ViewsComponents>
+    <ViewsComponents ></ViewsComponents>
   </div>
 </template>
 
@@ -11,10 +11,16 @@ import ViewsComponents from "@/components/ViewsComponents";
 
 export default {
   name: "WindowViews",
+  props:[],
   components:{
     ViewsComponents,
     WindowBar,
-  }
+  },
+  data(){
+    return{
+
+    }
+  },
 }
 </script>
 

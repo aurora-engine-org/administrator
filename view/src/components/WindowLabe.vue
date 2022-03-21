@@ -1,7 +1,7 @@
 <template>
   <div class="window-labe">
     <div>
-      labe
+      {{title}}
     </div>
   </div>
 </template>

@@ -15,13 +15,13 @@
     <div v-if="menu.isOpen">
       <!--  当前菜单选项    -->
       <div class="item" v-for="item in menu.items" :key="item">
-        <div class="item-title" @click="openMenu(item)">
+        <div class="item-title" @click="openMenu(item),addWindowsLabels(item)">
           {{item}}
         </div>
       </div>
 
       <div class="child-menu"  v-if="menu.isOpen">
-        <TreeMenu :menus="menu.child"></TreeMenu>
+        <TreeMenu :menus="menu.child" :window-labels="windowLabels"></TreeMenu>
       </div>
     </div>
     </transition>
@@ -33,7 +33,7 @@
 
 export default {
   name: "TreeMenu",
-  props:['menus'],
+  props:['menus','windowLabels'],
   data(){
     return{
 
@@ -61,6 +61,10 @@ export default {
     openMenu(item){
       this.$router.push({name:item})
     },
+    addWindowsLabels(item){
+      console.log("addWindowsLabels:"+item)
+      this.$emit('addwindow',item)
+    }
   },
 }
 

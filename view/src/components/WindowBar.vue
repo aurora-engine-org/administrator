@@ -1,7 +1,7 @@
 <template>
   <div class="window-bar">
 <!--  窗口标签  -->
-    <WindowLabe></WindowLabe>
+    <WindowLabe v-for="label in windowLabel" :key="label" :title="label"></WindowLabe>
   </div>
 </template>
 
@@ -10,9 +10,15 @@ import WindowLabe from "@/components/WindowLabe";
 
 export default {
   name: "WindowBar",
+  props:['windowLabel'],
   components:{
     WindowLabe,
-  }
+  },
+  data(){
+    return{
+
+    }
+  },
 }
 </script>
 
