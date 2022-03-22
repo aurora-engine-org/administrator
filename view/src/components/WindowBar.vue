@@ -29,9 +29,11 @@ export default {
       //删除一个标签，默认切换后一个标签
       this.windowLabel.splice($event,1)
       if ($event<this.windowLabel.length){
+        //更新选中标签高亮
         this.num=$event
         this.$router.push("/admin/"+this.windowLabel[$event])
       }else {
+        //更新选中标签高亮
         this.num=$event-1
         this.$router.push("/admin/"+this.windowLabel[$event-1])
       }
