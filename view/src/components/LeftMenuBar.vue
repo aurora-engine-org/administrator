@@ -54,7 +54,7 @@ export default {
 
 .left-menu{
   width: 10vw;
-  background-color: white;
+  background-color: #e5dede;
   overflow: auto;
 }
 
@@ -62,13 +62,15 @@ export default {
   height: 40px;
   display: flex;
   flex-direction: row;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
 }
 
 .left-menu-tile-icon{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 .home-icon{
@@ -82,6 +84,6 @@ export default {
   justify-content: center;
   user-select: none;
   text-align: center;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 </style>

@@ -4,7 +4,7 @@
       <div class="label-icon-box">
         <img src="../../public/ui/discount.png" class="label-icon">
       </div>
-      <div style="color: azure; margin-right: 3px">
+      <div style="color: black; margin-right: 3px;display: flex;flex-direction: column;justify-content: center;text-align: center;font-size: 25px">
         {{title}}
       </div>
     </div>
@@ -32,7 +32,8 @@ export default {
 
 <style scoped>
 .window-label{
-  background-color: orange;
+  height: 40px;
+  background-color: #b8b7b7;
   user-select: none;
   display: flex;
   flex-direction: row;
@@ -44,8 +45,8 @@ export default {
 }
 
 .label-icon{
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .label-title{
@@ -64,13 +65,14 @@ export default {
   margin-right: 2px;
   width: 15px;
   height: 15px;
+  border-radius: 20px;
 }
 
 .label-close:hover{
-  background-color: dimgray;
+  background-color: #978f8f;
 }
 .close-icon{
- display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }

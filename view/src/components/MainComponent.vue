@@ -1,6 +1,11 @@
 <template>
+<!--
+  后台管理系统，侧边菜单栏以及，主面板显示出
+-->
  <div class="main">
+<!--   侧边菜单栏-->
     <LeftMenuBar  title='Home' :menus="menus" :windowLabels="windowLabels" ></LeftMenuBar>
+<!--   主窗口面板显示-->
     <WindowViews></WindowViews>
  </div>
 </template>
@@ -22,7 +27,7 @@ export default {
       menus:  [
         {
           //顶层菜单名
-          title:"1",
+          title:"个人信息",
           isOpen:false,
           //菜单选项
           items:[
@@ -32,27 +37,20 @@ export default {
           ],
           //子菜单
           child:[
-            {
-              title:"1-1",
-              isOpen:false,
-              items:[
-                'ddd',
-                'eee',
-                'fff'
-              ],
-              child:[
-                {
-                  title:"1-1-1",
-                  isOpen:false,
-                  items:[
-                    'ggg',
-                    'hhh',
-                    'iii'
-                  ],
-                  child:[]
-                },
-              ]
-            }
+          ]
+        },
+        {
+          //顶层菜单名
+          title:"创作中心",
+          isOpen:false,
+          //菜单选项
+          items:[
+            'test',
+            'bbb',
+            'ccc'
+          ],
+          //子菜单
+          child:[
           ]
         },
       ],

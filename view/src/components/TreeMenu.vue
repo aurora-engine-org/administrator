@@ -46,10 +46,6 @@ export default {
   },
   //data end
   methods:{
-    //箭头旋转
-    spin(){
-
-    },
     close(e){
       //判断当前菜单是否打开，如果打开则关闭所有子菜单
       if (this.menus[e].isOpen===false){
@@ -86,9 +82,10 @@ export default {
 
 }
 .menu-title{
+  height: 40px;
   display: flex;
   flex-direction: row;
-  background-color: #42b983;
+  background-color: #e5e5e5;
 }
 .title-text{
   display: flex;
@@ -98,25 +95,33 @@ export default {
   user-select: none;
 }
 .menu-title-arrow{
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .menu-title-arrowTrans{
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   transform: rotate(90deg);
 }
 .title-arrow{
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
 }
 .item{
   height: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #339c6b;
-
+  background-color: #c7cbc8;
+}
+.item:hover{
+  background-color: #dbd5d5;
 }
 .item-title{
   padding-left: 40px;

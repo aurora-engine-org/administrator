@@ -5,6 +5,7 @@ const routes = [
     {
         path:'/admin',
         name:'admin',
+        redirect:'/admin/home',
         component:()=>import("@/views/admin/AdminView"),
         children:[
             {
