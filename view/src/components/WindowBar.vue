@@ -20,6 +20,7 @@ export default {
     }
   },
   methods:{
+    //切换系统面板
     switchTo($event){
       //更新选中标签高亮
       this.num=$event
