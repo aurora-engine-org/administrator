@@ -41,6 +41,6 @@ export default {
   background-color: dimgray;
 }
 .close-icon{
-  border-radius: 10px;
+  border-radius: 1px;
 }
 </style>
