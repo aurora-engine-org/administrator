@@ -1,6 +1,6 @@
 <template>
   <div class="window-label">
-    <div class="label-title">
+    <div class="label-title" @click="checkLabel(index)">
       {{title}}
     </div>
     <div class="close-icon">
@@ -16,8 +16,10 @@ export default {
   methods:{
     closeWindow(index){
       //让父组件删除一个下标为 index的标签
-      console.log(index)
       this.$emit('delete-index',index)
+    },
+    checkLabel(index){
+      this.$emit('switch-to',index)
     }
   },
 }

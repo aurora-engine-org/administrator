@@ -13,6 +13,11 @@ const routes = [
                 component:()=>import("@/views/TestView")
             },
             {
+                path:'home',
+                name:'admin-home',
+                component:()=>import('@/views/admin/AdminHome')
+            },
+            {
                 path:'404',
                 name: 'not-found',
                 component:()=>import('@/views/notfound/NotFound')
