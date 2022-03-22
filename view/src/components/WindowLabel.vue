@@ -1,10 +1,10 @@
 <template>
   <div class="window-label">
-    <div>
+    <div class="label-title">
       {{title}}
     </div>
     <div class="close-icon">
-      <img src="../../public/ui/close.png" alt="close">
+      <img class="label-close" src="../../public/ui/close.png" alt="close" @click="closeWindow(index)">
     </div>
   </div>
 </template>
@@ -12,9 +12,13 @@
 <script>
 export default {
   name: "WindowLabel",
-  props:['title','name'],
+  props:['title','index'],
   methods:{
-
+    closeWindow(index){
+      //让父组件删除一个下标为 index的标签
+      console.log(index)
+      this.$emit('delete-index',index)
+    }
   },
 }
 </script>
@@ -33,14 +37,17 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.window-label>div>img{
-  width: 20px;
-  height: 20px;
+
+.label-close{
+  margin-right: 2px;
+  width: 15px;
+  height: 15px;
 }
-.window-label>div>img:hover{
+.label-close:hover{
   background-color: dimgray;
 }
 .close-icon{
-  border-radius: 1px;
+
 }
+
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="window-bar">
 <!--  窗口标签  -->
-    <WindowLabel v-for="label in windowLabel" :key="label" :title="label"></WindowLabel>
+    <WindowLabel @delete-index="deleteIndex($event)" v-for="(label,index) in windowLabel" :key="label" :title="label" :index="index"></WindowLabel>
   </div>
 </template>
 
@@ -19,6 +19,13 @@ export default {
     }
   },
   methods:{
+    deleteIndex($event){
+      //删除一个标签
+      this.windowLabel.splice($event,1)
+      if ($event<this.windowLabel.length){
+        this.$router.push("/admin/"+this.windowLabel[$event])
+      }
+    },
     addWindowLabel(item){
       console.log(item)
       let flag=true
