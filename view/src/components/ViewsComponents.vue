@@ -13,6 +13,8 @@ export default {
 
 <style scoped>
 .views{
+  width: 100%;
+  height: 100%;
   overflow: auto;
 }
 </style>

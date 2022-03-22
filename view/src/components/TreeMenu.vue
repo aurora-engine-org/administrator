@@ -86,12 +86,9 @@ export default {
 
 }
 .menu-title{
-  height: 40px;
   display: flex;
   flex-direction: row;
-
   background-color: #42b983;
-
 }
 .title-text{
   display: flex;
@@ -101,14 +98,17 @@ export default {
   user-select: none;
 }
 .menu-title-arrow{
-
+  width: 20px;
+  height: 20px;
 }
 .menu-title-arrowTrans{
+  width: 20px;
+  height: 20px;
   transform: rotate(90deg);
 }
 .title-arrow{
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 }
 .item{
   height: 40px;

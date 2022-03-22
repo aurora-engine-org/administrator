@@ -36,8 +36,7 @@ export default {
       }
     },
     addWindowLabel(item){
-      console.log(item)
-      let flag=true
+      let flag=true //防止重复添加 窗口标签
       if (this.windowLabel.length===0){
         this.windowLabel.push(item)
       }
@@ -49,7 +48,6 @@ export default {
       if (flag){
         this.windowLabel.push(item)
       }
-      console.log(this.windowLabel)
     }
   },
   mounted() {

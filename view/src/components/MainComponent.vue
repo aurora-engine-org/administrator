@@ -1,6 +1,6 @@
 <template>
  <div class="main">
-    <LeftMenuBar  title='Menu' :menus="menus" :windowLabels="windowLabels" ></LeftMenuBar>
+    <LeftMenuBar  title='Home' :menus="menus" :windowLabels="windowLabels" ></LeftMenuBar>
     <WindowViews></WindowViews>
  </div>
 </template>

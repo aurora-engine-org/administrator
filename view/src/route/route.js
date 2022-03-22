@@ -5,7 +5,7 @@ const routes = [
     {
         path:'/admin',
         name:'admin',
-        component:()=>import("@/views/AdminView"),
+        component:()=>import("@/views/admin/AdminView"),
         children:[
             {
                 path:'test',

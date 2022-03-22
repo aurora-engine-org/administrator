@@ -1,6 +1,13 @@
 <template>
   <div class="left-menu">
-    <div class="left-menu-tile">{{title}}</div>
+    <div class="left-menu-tile" @click="openHome">
+      <div class="left-menu-tile-icon">
+          <img src="../../public/ui/home-fill.png" class="home-icon">
+      </div>
+      <div class="left-menu-tile-text">
+        {{title}}
+      </div>
+    </div>
     <TreeMenu :menus="menus" :windowLabels="windowLabels"></TreeMenu>
   </div>
 </template>
@@ -20,6 +27,9 @@ export default {
     }
   },
   methods: {
+    openHome(){
+      this.$router.push("/admin/home")
+    },
     addWindowLabel(item){
       console.log(item)
       let flag=true
@@ -47,13 +57,31 @@ export default {
   background-color: white;
   overflow: auto;
 }
+
 .left-menu-tile{
   height: 40px;
-  background-color: white;
-  user-select: none;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.left-menu-tile-icon{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-left: 5px;
+}
+
+.home-icon{
+  width: 20px;
+  height: 20px;
+}
+
+.left-menu-tile-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  user-select: none;
+  text-align: center;
+  margin-left: 5px;
 }
 </style>

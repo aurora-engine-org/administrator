@@ -19,7 +19,7 @@ export default {
   justify-content: center;
   color: white;
   background-color: black;
-  font-size: 100px;
+  font-size: 50px;
   text-align: center;
 }
 </style>

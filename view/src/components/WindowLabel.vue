@@ -1,7 +1,12 @@
 <template>
   <div class="window-label">
     <div class="label-title" @click="checkLabel(index)">
-      {{title}}
+      <div class="label-icon-box">
+        <img src="../../public/ui/discount.png" class="label-icon">
+      </div>
+      <div style="color: azure; margin-right: 3px">
+        {{title}}
+      </div>
     </div>
     <div class="close-icon">
       <img class="label-close" src="../../public/ui/close.png" alt="close" @click="closeWindow(index)">
@@ -27,17 +32,32 @@ export default {
 
 <style scoped>
 .window-label{
-  background-color: #907fff;
+  background-color: orange;
   user-select: none;
   display: flex;
   flex-direction: row;
   padding-left: 5px;
   margin-left: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 5px;
 }
-.window-label>div{
+
+.label-icon{
+  width: 20px;
+  height: 20px;
+}
+
+.label-title{
+  display: flex;
+  flex-direction: row;
+}
+
+.label-icon-box{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 5px;
 }
 
 .label-close{
@@ -45,11 +65,17 @@ export default {
   width: 15px;
   height: 15px;
 }
+
 .label-close:hover{
   background-color: dimgray;
 }
 .close-icon{
-
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+
+
 
 </style>
