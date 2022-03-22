@@ -48,7 +48,5 @@ export default {
   .window-bar{
     display: flex;
     flex-direction: row;
-    height: 40px;
-    background-color: aquamarine;
   }
 </style>
