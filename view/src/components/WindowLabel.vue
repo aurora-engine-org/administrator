@@ -18,6 +18,11 @@
 export default {
   name: "WindowLabel",
   props:['title','index'],
+  data(){
+    return{
+
+    }
+  },
   methods:{
     closeWindow(index){
       //让父组件删除一个下标为 index的标签
@@ -27,6 +32,7 @@ export default {
       this.$emit('switch-to',index)
     }
   },
+
 }
 </script>
 
@@ -77,7 +83,17 @@ export default {
   justify-content: center;
 }
 
-
-
+.active{
+  height: 40px;
+  background-color: #3cc987;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 5px;
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 5px;
+}
 
 </style>

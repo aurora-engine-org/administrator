@@ -1,7 +1,7 @@
 <template>
   <div class="window-bar">
 <!--  窗口标签  -->
-    <WindowLabel @delete-index="deleteIndex($event)" @switch-to="switchTo($event)" v-for="(label,index) in windowLabel" :key="label" :title="label" :index="index"></WindowLabel>
+    <WindowLabel :class="resultNum===index?'active':'window-label'" @delete-index="deleteIndex($event)" @switch-to="switchTo($event)"  v-for="(label,index) in windowLabel" :key="label" :title="label" :index="index"></WindowLabel>
   </div>
 </template>
 
@@ -15,22 +15,27 @@ export default {
   },
   data(){
     return{
-      windowLabel:[]
+      windowLabel:[],
+      num:0
     }
   },
   methods:{
     switchTo($event){
+      //更新选中标签高亮
+      this.num=$event
       this.$router.push("/admin/"+this.windowLabel[$event])
     },
     deleteIndex($event){
       //删除一个标签，默认切换后一个标签
       this.windowLabel.splice($event,1)
       if ($event<this.windowLabel.length){
+        this.num=$event
         this.$router.push("/admin/"+this.windowLabel[$event])
       }else {
+        this.num=$event-1
         this.$router.push("/admin/"+this.windowLabel[$event-1])
       }
-      if (this.windowLabel.length==0){
+      if (this.windowLabel.length===0){
         //关闭完所有打开窗口 默认回到 admin 的 home页面
         this.$router.push("/admin/home")
       }
@@ -39,14 +44,20 @@ export default {
       let flag=true //防止重复添加 窗口标签
       if (this.windowLabel.length===0){
         this.windowLabel.push(item)
+        //更新选中标签高亮
+        this.num=this.windowLabel.length-1
       }
       for (let i=0;i<this.windowLabel.length;i++){
         if (item===this.windowLabel[i]){
+          //更新选中标签高亮
+          this.num=i
           flag=false
         }
       }
       if (flag){
         this.windowLabel.push(item)
+        //更新选中标签高亮
+        this.num=this.windowLabel.length-1
       }
     }
   },
@@ -54,6 +65,12 @@ export default {
     this.$bus.on('addwindow',item=>{
       this.addWindowLabel(item)
     })
+  },
+  computed:{
+    resultNum(){
+      //属性计算返回被选中的标签序号
+      return this.num
+    }
   }
 }
 </script>

@@ -16,7 +16,6 @@ import ViewsComponents from "@/components/ViewsComponents";
 
 export default {
   name: "WindowViews",
-  props:[],
   components:{
     ViewsComponents,
     WindowBar,

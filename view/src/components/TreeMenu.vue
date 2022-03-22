@@ -8,12 +8,11 @@
       <div :class="{'menu-title-arrow':!menu.isOpen,'menu-title-arrowTrans':menu.isOpen}">
         <img class="title-arrow" src="../../public/ui/arrow-right.png">
       </div>
+
       <div class="title-text" >
         {{menu.title}}
       </div>
     </div>
-
-    <transition name="fade">
     <div v-if="menu.isOpen">
       <!--  当前菜单选项    -->
       <div class="item" v-for="item in menu.items" :key="item">
@@ -26,7 +25,6 @@
         <TreeMenu :menus="menu.child" :window-labels="windowLabels"></TreeMenu>
       </div>
     </div>
-    </transition>
   </div>
 
 </template>
@@ -112,6 +110,7 @@ export default {
 .title-arrow{
   width: 40px;
   height: 40px;
+  user-select: none;
 }
 .item{
   height: 40px;
@@ -123,18 +122,11 @@ export default {
 .item:hover{
   background-color: #dbd5d5;
 }
+
 .item-title{
   padding-left: 40px;
   user-select: none;
 }
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
 
 </style>
