@@ -1,6 +1,5 @@
-
 import { createRouter, createWebHashHistory } from 'vue-router'
-
+// administrator 系统路由配置
 const routes = [
     {
         path:'/admin',
@@ -13,6 +12,7 @@ const routes = [
                 name:'test',
                 component:()=>import("@/views/TestView")
             },
+            //管理页面 首页
             {
                 path:'home',
                 name:'admin-home',
@@ -23,6 +23,7 @@ const routes = [
                 name: 'not-found',
                 component:()=>import('@/views/notfound/NotFound')
             },
+            // /admin/:pathMatch(.*) 定向 管理系统内 菜单页面找不到提示
             {
                 path: "/admin/:pathMatch(.*)",
                 redirect:'/admin/404',

@@ -4,7 +4,7 @@
 -->
  <div class="main">
 <!--   侧边菜单栏-->
-    <LeftMenuBar  title='Home' :menus="menus" :windowLabels="windowLabels" ></LeftMenuBar>
+    <LeftMenuBar  title='Home' :menus="menus" ></LeftMenuBar>
 <!--   主窗口面板显示-->
     <WindowViews></WindowViews>
  </div>
@@ -24,6 +24,7 @@ export default {
   },
   data(){
     return{
+      //自定义目录位置
       menus:  [
         {
           //顶层菜单名
