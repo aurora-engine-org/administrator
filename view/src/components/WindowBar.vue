@@ -20,12 +20,14 @@ export default {
     }
   },
   methods:{
-    //切换系统面板
+    //切换系统面板 $event 需要切换的label下标
     switchTo($event){
       //更新选中标签高亮
       this.num=$event
       this.$router.push("/admin/"+this.windowLabel[$event].path)
     },
+
+    //$event 需要删除的label下标
     deleteIndex($event){
       //删除一个标签，默认切换后一个标签
       this.windowLabel.splice($event,1)
@@ -33,13 +35,10 @@ export default {
         //更新选中标签高亮
         this.num=$event
         this.$router.push("/admin/"+this.windowLabel[$event].path)
-      }else {
-        //更新选中标签高亮
-        this.num=$event-1
-        this.$router.push("/admin/"+this.windowLabel[$event-1].path)
       }
       if (this.windowLabel.length===0){
         //关闭完所有打开窗口 默认回到 admin 的 home页面
+        this.num=-1
         this.$router.push("/admin/home")
       }
     },
