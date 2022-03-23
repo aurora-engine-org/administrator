@@ -2,6 +2,11 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 // administrator 系统路由配置
 const routes = [
     {
+        path:'/',
+        name:'index',
+        component:()=>import('@/views/page/IndexView')
+    },
+    {
         path:'/admin',
         name:'admin',
         redirect:'/admin/home',
