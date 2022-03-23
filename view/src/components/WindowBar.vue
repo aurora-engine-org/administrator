@@ -1,7 +1,7 @@
 <template>
   <div class="window-bar">
 <!--  窗口标签  -->
-    <WindowLabel :class="resultNum===index?'active':'window-label'" @delete-index="deleteIndex($event)" @switch-to="switchTo($event)"  v-for="(label,index) in windowLabel" :key="label" :title="label" :index="index"></WindowLabel>
+    <WindowLabel :class="resultNum===index?'active':'window-label'" @delete-index="deleteIndex($event)" @switch-to="switchTo($event)"  v-for="(label,index) in windowLabel" :key="label" :title="label.title" :index="index"></WindowLabel>
   </div>
 </template>
 
@@ -24,7 +24,7 @@ export default {
     switchTo($event){
       //更新选中标签高亮
       this.num=$event
-      this.$router.push("/admin/"+this.windowLabel[$event])
+      this.$router.push("/admin/"+this.windowLabel[$event].path)
     },
     deleteIndex($event){
       //删除一个标签，默认切换后一个标签
@@ -32,11 +32,11 @@ export default {
       if ($event<this.windowLabel.length){
         //更新选中标签高亮
         this.num=$event
-        this.$router.push("/admin/"+this.windowLabel[$event])
+        this.$router.push("/admin/"+this.windowLabel[$event].path)
       }else {
         //更新选中标签高亮
         this.num=$event-1
-        this.$router.push("/admin/"+this.windowLabel[$event-1])
+        this.$router.push("/admin/"+this.windowLabel[$event-1].path)
       }
       if (this.windowLabel.length===0){
         //关闭完所有打开窗口 默认回到 admin 的 home页面
@@ -85,5 +85,7 @@ export default {
   .window-bar{
     display: flex;
     flex-direction: row;
+    /*标签过多折叠换行*/
+    flex-wrap: wrap;
   }
 </style>

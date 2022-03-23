@@ -31,9 +31,9 @@ export default {
           isOpen:false,
           //菜单选项
           items:[
-            '个人资料',
-            '账号安全',
-            '黑名单管理'
+            {title:'个人资料',path:'test'},
+            {title:'账号安全',path:'账号安全'},
+            {title:'黑名单管理',path:'黑名单管理'},
           ],
           //子菜单
           child:[
@@ -44,7 +44,9 @@ export default {
           title:"创作中心",
           isOpen:false,
           //菜单选项
-          items:['其他'],
+          items:[
+            {title:'其他',path:'其他'},
+          ],
           //子菜单
           child:[
             {
@@ -53,24 +55,10 @@ export default {
               isOpen:false,
               //菜单选项
               items:[
-                '稿件管理',
+                {title:'稿件管理',path:'稿件管理'},
               ],
               //子菜单
-              child:[
-                {
-                  //顶层菜单名
-                  title:"其他管理",
-                  isOpen:false,
-                  //菜单选项
-                  items:[
-                    '管理',
-                  ],
-                  //子菜单
-                  child:[
-
-                  ]
-                },
-              ]
+              child:[]
             },
           ]
         },

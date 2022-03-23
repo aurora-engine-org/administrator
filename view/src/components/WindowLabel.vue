@@ -37,6 +37,7 @@ export default {
 </script>
 
 <style scoped>
+/*标签默认状态样式*/
 .window-label{
   height: 40px;
   background-color: white;
@@ -45,6 +46,18 @@ export default {
   flex-direction: row;
   margin-left: 2px;
   margin-bottom: 2px;
+}
+/*标签活跃状态样式*/
+.active{
+  height: 40px;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
 }
 
 .label-icon{
@@ -89,18 +102,5 @@ export default {
   justify-content: center;
 }
 
-.active{
-  height: 40px;
-  user-select: none;
-  display: flex;
-  flex-direction: row;
-  margin-left: 2px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #02AAE1FF;
-  color: #02AAE1FF;
-}
 
 </style>

@@ -18,9 +18,9 @@
     <div class="item-background" v-if="menu.isOpen">
       <!--  当前菜单选项    -->
       <div class="item-box">
-        <div class="item" v-for="item in menu.items" :key="item" @click="openMenu(item),addWindowsLabels(item)">
+        <div class="item" v-for="item in menu.items" :key="item" @click="openMenu(item.path),addWindowsLabels(item)">
           <div class="item-title" >
-            {{item}}
+            {{item.title}}
           </div>
         </div>
       </div>
