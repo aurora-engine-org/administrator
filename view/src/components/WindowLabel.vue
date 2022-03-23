@@ -90,11 +90,11 @@ export default {
   margin-right: 2px;
   width: 40px;
   height: 40px;
-  border-radius: 100%;
 }
 
 .label-close:hover{
-  background-color: rgb(229, 229, 229);
+  background-color: rgb(22, 23, 23);
+  content: url('../../public/ui/close-1.png');
 }
 .close-icon{
   display: flex;
