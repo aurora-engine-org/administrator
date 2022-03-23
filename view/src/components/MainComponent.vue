@@ -27,13 +27,13 @@ export default {
       menus:  [
         {
           //顶层菜单名
-          title:"个人信息",
+          title:"个人中心",
           isOpen:false,
           //菜单选项
           items:[
-            'test',
-            'bbb',
-            'ccc'
+            '个人资料',
+            '账号安全',
+            '黑名单管理'
           ],
           //子菜单
           child:[
@@ -44,13 +44,34 @@ export default {
           title:"创作中心",
           isOpen:false,
           //菜单选项
-          items:[
-            'test',
-            'bbb',
-            'ccc'
-          ],
+          items:['其他'],
           //子菜单
           child:[
+            {
+              //顶层菜单名
+              title:"内容管理",
+              isOpen:false,
+              //菜单选项
+              items:[
+                '稿件管理',
+              ],
+              //子菜单
+              child:[
+                {
+                  //顶层菜单名
+                  title:"其他管理",
+                  isOpen:false,
+                  //菜单选项
+                  items:[
+                    '管理',
+                  ],
+                  //子菜单
+                  child:[
+
+                  ]
+                },
+              ]
+            },
           ]
         },
       ],

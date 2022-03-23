@@ -5,25 +5,29 @@
   <div class="menu" v-for="(menu,index) in menus" :key="menu" @click="close(index)">
     <!--  当前菜单名  -->
     <div class="menu-title" @click="menu.isOpen=!menu.isOpen">
-      <div :class="{'menu-title-arrow':!menu.isOpen,'menu-title-arrowTrans':menu.isOpen}">
-        <img class="title-arrow" src="../../public/ui/arrow-right.png">
-      </div>
-
-      <div class="title-text" >
-        {{menu.title}}
-      </div>
-    </div>
-    <div v-if="menu.isOpen">
-      <!--  当前菜单选项    -->
-      <div class="item" v-for="item in menu.items" :key="item">
-        <div class="item-title" @click="openMenu(item),addWindowsLabels(item)">
-          {{item}}
+      <div class="menu-title-box">
+        <div :class="{'menu-title-arrow':!menu.isOpen,'menu-title-arrowTrans':menu.isOpen}">
+          <img class="title-arrow" src="../../public/ui/arrow-right.png">
+        </div>
+        <div class="title-text" >
+          {{menu.title}}
         </div>
       </div>
+    </div>
 
-      <div class="child-menu"  v-if="menu.isOpen">
-        <TreeMenu :menus="menu.child" :window-labels="windowLabels"></TreeMenu>
+    <div class="item-background" v-if="menu.isOpen">
+      <!--  当前菜单选项    -->
+      <div class="item-box">
+        <div class="item" v-for="item in menu.items" :key="item" @click="openMenu(item),addWindowsLabels(item)">
+          <div class="item-title" >
+            {{item}}
+          </div>
+        </div>
       </div>
+    </div>
+
+    <div class="child-menu"  v-if="menu.isOpen">
+      <TreeMenu :menus="menu.child"></TreeMenu>
     </div>
   </div>
 
@@ -33,7 +37,7 @@
 
 export default {
   name: "TreeMenu",
-  props:['menus','windowLabels'],
+  props:['menus'],
   components:{
 
   },
@@ -65,7 +69,7 @@ export default {
     },
 
     addWindowsLabels(item){
-      //通过消息总线 传递给窗口标签组件创建一个标签
+      //通过消息总线 传递给窗口标签组件创建一个标签 WindowBar 组件
       this.$bus.emit('addwindow',item)
     }
   },
@@ -76,14 +80,11 @@ export default {
 </script>
 
 <style scoped>
-.menu{
 
-}
-.menu-title{
+.menu-title-box{
   height: 40px;
   display: flex;
   flex-direction: row;
-  background-color: #e5e5e5;
 }
 .title-text{
   display: flex;
@@ -114,19 +115,22 @@ export default {
 }
 .item{
   height: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #c7cbc8;
+  margin-left: 40px;
 }
-.item:hover{
-  background-color: #dbd5d5;
+.item-title:hover{
+  color: blue;
 }
 
 .item-title{
-  padding-left: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   user-select: none;
 }
 
-
+/*子菜单样式格式管理*/
+.child-menu{
+  margin-left: 25px;
+}
 </style>

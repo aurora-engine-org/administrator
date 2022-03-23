@@ -8,7 +8,7 @@
         {{title}}
       </div>
     </div>
-    <TreeMenu :menus="menus" :windowLabels="windowLabels"></TreeMenu>
+    <TreeMenu :menus="menus"></TreeMenu>
   </div>
 </template>
 
@@ -28,10 +28,11 @@ export default {
   },
   methods: {
     openHome(){
+      //打开管理首页 让高亮标签取消 WindowBar组件监听处理
+      this.$bus.emit('open-home',-1)
       this.$router.push("/admin/home")
     },
     addWindowLabel(item){
-      console.log(item)
       let flag=true
       if (this.windowLabels.length===0){
         this.windowLabels.push(item)
@@ -44,7 +45,6 @@ export default {
       if (flag){
         this.windowLabels.push(item)
       }
-      console.log(this.windowLabels)
     }
   },
 }
@@ -53,13 +53,13 @@ export default {
 <style scoped>
 
 .left-menu{
-  width: 10vw;
-  background-color: #e5dede;
+  width: 15vw;
+  background-color: #dbd5d5;
   overflow: auto;
 }
 
 .left-menu-tile{
-  height: 40px;
+  height: 45px;
   display: flex;
   flex-direction: row;
   border-bottom-style: solid;

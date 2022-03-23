@@ -68,6 +68,9 @@ export default {
     this.$bus.on('addwindow',item=>{
       this.addWindowLabel(item)
     })
+    this.$bus.on('open-home',key=>{
+      this.num=key
+    })
   },
   computed:{
     resultNum(){

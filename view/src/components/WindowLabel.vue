@@ -4,7 +4,7 @@
       <div class="label-icon-box">
         <img src="../../public/ui/discount.png" class="label-icon">
       </div>
-      <div style="color: black; margin-right: 3px;display: flex;flex-direction: column;justify-content: center;text-align: center;font-size: 25px">
+      <div class="label-title-text">
         {{title}}
       </div>
     </div>
@@ -39,15 +39,12 @@ export default {
 <style scoped>
 .window-label{
   height: 40px;
-  background-color: #b8b7b7;
+  background-color: white;
   user-select: none;
   display: flex;
   flex-direction: row;
-  padding-left: 5px;
   margin-left: 2px;
-  margin-top: 2px;
   margin-bottom: 2px;
-  border-radius: 5px;
 }
 
 .label-icon{
@@ -59,6 +56,15 @@ export default {
   display: flex;
   flex-direction: row;
 }
+.label-title-text{
+  color: black;
+  margin-right: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px
+}
 
 .label-icon-box{
   display: flex;
@@ -69,13 +75,13 @@ export default {
 
 .label-close{
   margin-right: 2px;
-  width: 15px;
-  height: 15px;
-  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
 }
 
 .label-close:hover{
-  background-color: #978f8f;
+  background-color: rgb(229, 229, 229);
 }
 .close-icon{
   display: flex;
@@ -85,15 +91,16 @@ export default {
 
 .active{
   height: 40px;
-  background-color: #3cc987;
   user-select: none;
   display: flex;
   flex-direction: row;
-  padding-left: 5px;
   margin-left: 2px;
   margin-top: 2px;
   margin-bottom: 2px;
-  border-radius: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #02AAE1FF;
+  color: #02AAE1FF;
 }
 
 </style>
