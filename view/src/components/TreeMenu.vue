@@ -4,7 +4,7 @@
 -->
   <div class="menu" v-for="(menu,index) in menus" :key="menu" @click="close(index)">
     <!--  当前菜单名  -->
-    <div class="menu-title" @click="menu.isOpen=!menu.isOpen">
+    <div :class="menu.isOpen?'menu-title-open':'menu-title'" @click="menu.isOpen=!menu.isOpen">
       <div class="menu-title-box">
         <div :class="{'menu-title-arrow':!menu.isOpen,'menu-title-arrowTrans':menu.isOpen}">
           <img class="title-arrow" src="../../public/ui/arrow-right.png">
@@ -80,7 +80,12 @@ export default {
 </script>
 
 <style scoped>
-
+.menu-title:hover{
+  background-color: #72777b;
+}
+.menu-title-open{
+  background-color: #72777b;
+}
 .menu-title-box{
   height: 40px;
   display: flex;

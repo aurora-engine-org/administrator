@@ -16,7 +16,7 @@ const routes = [
             {
                 path:'home',
                 name:'admin-home',
-                component:()=>import('@/views/admin/AdminHome')
+                component:()=>import('@/views/admin/page/AdminHome')
             },
             {
                 path:'404',

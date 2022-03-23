@@ -36,6 +36,13 @@ export default {
         this.num=$event
         this.$router.push("/admin/"+this.windowLabel[$event].path)
       }
+
+      //当剩余2个标签 被关闭后面一个时候
+      if (this.windowLabel.length===1){
+        this.$router.push("/admin/"+this.windowLabel[0].path)
+      }
+
+      //删除最后一个标签 默认显示 admin home
       if (this.windowLabel.length===0){
         //关闭完所有打开窗口 默认回到 admin 的 home页面
         this.num=-1

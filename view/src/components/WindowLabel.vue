@@ -47,6 +47,9 @@ export default {
   margin-left: 2px;
   margin-bottom: 2px;
 }
+.window-label:hover{
+  background-color: #dbd5d5;
+}
 /*标签活跃状态样式*/
 .active{
   height: 40px;
@@ -87,7 +90,6 @@ export default {
 }
 
 .label-close{
-  margin-right: 2px;
   width: 40px;
   height: 40px;
 }
