@@ -2,7 +2,6 @@
   <!--
    后台管理页面布局
    -->
-  <HeaderComponent></HeaderComponent>
   <MainComponent></MainComponent>
   <FooterComponent></FooterComponent>
 </template>

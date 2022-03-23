@@ -1,12 +1,15 @@
 <template>
+  <HeaderComponent></HeaderComponent>
   <router-view></router-view>
 </template>
 
 <script>
+import HeaderComponent from "@/components/HeaderComponent";
+
 export default {
   name: 'App',
   components: {
-
+    HeaderComponent,
   },
   created() {
 
