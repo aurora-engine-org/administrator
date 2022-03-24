@@ -38,6 +38,7 @@ export default {
       }
       //当剩余2个标签 被关闭后面一个时候
       if (this.windowLabel.length===1){
+        this.num=0
         this.$router.push("/admin/"+this.windowLabel[0].path)
       }
 

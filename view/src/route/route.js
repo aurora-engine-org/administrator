@@ -28,6 +28,16 @@ const routes = [
                 name: 'not-found',
                 component:()=>import('@/views/notfound/NotFound')
             },
+            {
+                path:'article',
+                name:'article',
+                component:()=>import('@/views/admin/page/WritingCenter')
+            },
+            {
+                path:'subject',
+                name:'subject',
+                component:()=>import('@/views/admin/page/WritingSubject')
+            },
             // /admin/:pathMatch(.*) 定向 管理系统内 菜单页面找不到提示
             {
                 path: "/admin/:pathMatch(.*)",

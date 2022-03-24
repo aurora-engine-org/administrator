@@ -1,8 +1,8 @@
 <template>
   <div class="index-page">
-    <div class="slide-box">
-      <SlideShow :pictures="pictures"></SlideShow>
-    </div>
+<!--    <div class="slide-box">-->
+<!--      <SlideShow :pictures="pictures"></SlideShow>-->
+<!--    </div>-->
 
   </div>
 </template>

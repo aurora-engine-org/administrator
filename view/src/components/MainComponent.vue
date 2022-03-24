@@ -46,7 +46,8 @@ export default {
           isOpen:false,
           //菜单选项
           items:[
-            {title:'其他',path:'其他'},
+            {title:'文章',path:'article'},
+            {title:'专栏',path:'subject'},
           ],
           //子菜单
           child:[

@@ -84,7 +84,7 @@ export default {
   background-color: #72777b;
 }
 .menu-title-open{
-  background-color: #72777b;
+  border-bottom-style: solid;
 }
 .menu-title-box{
   height: 40px;

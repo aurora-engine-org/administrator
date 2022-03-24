@@ -3,27 +3,31 @@
 
     <div class="slide-left-box">
       <div class="left-img-box">
+
         <div class="left-img">
           <img class="limg" :src="require('../../public/imgs/'+this.pictures[leftIndex])" @click="checkLeft">
         </div>
+
       </div>
     </div>
 
     <div class="slide-center-box">
-      <div :class="center-img-box">
+      <div class="center-img-box">
+
         <div class="center-img">
-          <transition name="center">
             <img class="cimg" :src="require('../../public/imgs/'+this.pictures[centerIndex])">
-          </transition>
         </div>
+
       </div>
     </div>
 
     <div class="slide-right-box">
       <div class="right-img-box">
+
         <div class="right-img">
           <img class="rimg" :src="require('../../public/imgs/'+this.pictures[rightIndex])" @click="checkRight">
         </div>
+
       </div>
     </div>
   </div>
@@ -120,6 +124,9 @@ export default {
 .left-img-box,.right-img-box{
   width: 300px;
   height: 250px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -131,7 +138,6 @@ export default {
 .limg,.rimg{
   width: 400px;
   height: 300px;
-  opacity: 0.3;
 }
 
 /*切换动画特效*/
