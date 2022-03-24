@@ -1,25 +1,28 @@
 <template>
   <div class="slide">
+
     <div class="slide-left-box">
       <div class="left-img-box">
         <div class="left-img">
-          <img class="limg" src="../../public/imgs/1.webp">
+          <img class="limg" :src="require('../../public/imgs/'+this.pictures[leftIndex])" @click="checkLeft">
         </div>
       </div>
     </div>
+
     <div class="slide-center-box">
-      <div :class="center-img-box" @click="check">
+      <div :class="center-img-box">
         <div class="center-img">
           <transition name="center">
-            <img class="cimg" :src="require('../../public/imgs/'+this.pictures[checkIndex])">
+            <img class="cimg" :src="require('../../public/imgs/'+this.pictures[centerIndex])">
           </transition>
         </div>
       </div>
     </div>
+
     <div class="slide-right-box">
       <div class="right-img-box">
         <div class="right-img">
-          <img class="rimg" src="../../public/imgs/3.webp">
+          <img class="rimg" :src="require('../../public/imgs/'+this.pictures[rightIndex])" @click="checkRight">
         </div>
       </div>
     </div>
@@ -32,22 +35,64 @@ export default {
   props:['pictures'],
   data(){
     return{
-      index:0
+      left:0,
+      center:1,
+      right:2,
     }
   },
   methods:{
-    check(){
-      if (this.index<this.pictures.length){
-        this.index++
+    checkLeft(){
+      console.log("l:",this.left,"c:",this.center,"r:",this.right)
+      if (this.left-1<0){
+        this.left=this.pictures.length-1
       }else {
-        this.index=0
+        this.left--
       }
+
+      if (this.center-1<0){
+        this.center=this.pictures.length-1   /// ???? 这个left 干啥的emmm
+      }else {
+        this.center--
+      }
+
+      if (this.right-1<0){
+        this.right=this.pictures.length-1
+      }else {
+        this.right--
+      }
+      console.log("l:",this.left,"c:",this.center,"r:",this.right)
+    },
+    checkRight(){
+      console.log("l:",this.left,"c:",this.center,"r:",this.right)
+      if (this.left+1>this.pictures.length-1){
+        this.left=0
+      }else {
+        this.left++
+      }
+
+      if (this.center+1>this.pictures.length-1){
+        this.center=0
+      }else {
+        this.center++
+      }
+
+      if (this.right+1>this.pictures.length-1){
+        this.right=0
+      }else {
+        this.right++
+      }
+      console.log("l:",this.left,"c:",this.center,"r:",this.right)
     }
   },
   computed:{
-    checkIndex(){
-      console.log(this.index)
-      return this.index
+    leftIndex(){
+      return this.left
+    },
+    centerIndex(){
+      return this.center
+    },
+    rightIndex(){
+      return this.right
     }
   }
 }
