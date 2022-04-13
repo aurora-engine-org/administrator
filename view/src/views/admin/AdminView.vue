@@ -2,14 +2,15 @@
   <!--
    后台管理页面布局
    -->
-  <MainComponent></MainComponent>
-  <FooterComponent></FooterComponent>
+  <header-component></header-component>
+  <main-component></main-component>
+  <footer-component></footer-component>
 </template>
 
 <script>
-import HeaderComponent from "@/components/HeaderComponent";
-import MainComponent from "@/components/MainComponent";
-import FooterComponent from "@/components/FooterComponent";
+import HeaderComponent from "@/components/admin/HeaderComponent";
+import MainComponent from "@/components/admin/MainComponent";
+import FooterComponent from "@/components/admin/FooterComponent";
 
 export default {
   name: "AdminView",

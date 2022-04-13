@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import WindowBar from "@/components/WindowBar";
-import ViewsComponents from "@/components/ViewsComponents";
+import WindowBar from "@/components/admin/WindowBar";
+import ViewsComponents from "@/components/admin/ViewsComponents";
 
 export default {
   name: "WindowViews",

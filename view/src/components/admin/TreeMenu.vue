@@ -7,7 +7,7 @@
     <div :class="menu.isOpen?'menu-title-open':'menu-title'" @click="menu.isOpen=!menu.isOpen">
       <div class="menu-title-box">
         <div :class="{'menu-title-arrow':!menu.isOpen,'menu-title-arrowTrans':menu.isOpen}">
-          <img class="title-arrow" src="../../public/ui/arrow-right.png">
+          <img class="title-arrow" src="../../../public/ui/arrow-right.png">
         </div>
         <div class="title-text" >
           {{menu.title}}
@@ -82,6 +82,11 @@ export default {
 <style scoped>
 .menu-title:hover{
   background-color: #72777b;
+  cursor: pointer;
+}
+.menu-title-open:hover{
+  background-color: #72777b;
+  cursor: pointer;
 }
 .menu-title-open{
   border-bottom-style: solid;
@@ -90,6 +95,10 @@ export default {
   height: 40px;
   display: flex;
   flex-direction: row;
+}
+.item:hover{
+  background-color: #72777b;
+  cursor: pointer;
 }
 .title-text{
   display: flex;
@@ -120,10 +129,13 @@ export default {
 }
 .item{
   height: 40px;
-  margin-left: 40px;
+
 }
 .item-title:hover{
   color: blue;
+}
+.item-title{
+  margin-left: 40px;
 }
 
 .item-title{

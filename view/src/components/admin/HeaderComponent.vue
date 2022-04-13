@@ -4,7 +4,7 @@
         <div class="home-page">
           <div class="home-box">
             <div class="home-img-box">
-              <img class="home-img" src="../../public/ui/home.png" alt="home" @click="openHome">
+              <img class="home-img" src="../../../public/ui/home.png" alt="home" @click="openHome">
             </div>
           </div>
         </div>
@@ -14,7 +14,7 @@
           <!--   账号头像      -->
           <div class="account-box">
             <div class="head-img-box">
-              <img class="head-img" src="../../public/ui/account-fill.png" alt="account" @click="openAdmin">
+              <img class="head-img" src="../../../public/ui/account-fill.png" alt="account" @click="openAdmin">
             </div>
           </div>
         </div>

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import WindowLabel from "@/components/WindowLabel";
+import WindowLabel from "@/components/admin/WindowLabel";
 
 export default {
   name: "WindowBar",

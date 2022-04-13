@@ -2,14 +2,14 @@
   <div class="window-label">
     <div class="label-title" @click="checkLabel(index)">
       <div class="label-icon-box">
-        <img src="../../public/ui/discount.png" class="label-icon">
+        <img src="../../../public/ui/discount.png" class="label-icon">
       </div>
       <div class="label-title-text">
         {{title}}
       </div>
     </div>
     <div class="close-icon">
-      <img class="label-close" src="../../public/ui/close.png" alt="close" @click="closeWindow(index)">
+      <img class="label-close" src="../../../public/ui/close.png" alt="close" @click="closeWindow(index)">
     </div>
   </div>
 </template>
@@ -96,7 +96,7 @@ export default {
 
 .label-close:hover{
   background-color: rgb(22, 23, 23);
-  content: url('../../public/ui/close-1.png');
+  content: url('../../../public/ui/close-1.png');
 }
 .close-icon{
   display: flex;

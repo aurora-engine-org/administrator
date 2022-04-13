@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import SlideShow from "@/components/SlideShow";
+import SlideShow from "@/components/admin/SlideShow";
 
 export default {
   name: "IndexView",

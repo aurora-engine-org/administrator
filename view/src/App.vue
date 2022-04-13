@@ -1,10 +1,8 @@
 <template>
-  <HeaderComponent></HeaderComponent>
   <router-view></router-view>
 </template>
-
 <script>
-import HeaderComponent from "@/components/HeaderComponent";
+import HeaderComponent from "@/components/admin/HeaderComponent";
 
 export default {
   name: 'App',
@@ -25,6 +23,7 @@ export default {
 #app {
   position: fixed;
   top: 0;
+  left: 0;
   display: flex;
   width: 100vw;
   height: 100vh;

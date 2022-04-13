@@ -13,8 +13,8 @@
 <script>
 
 
-import LeftMenuBar from "@/components/LeftMenuBar";
-import WindowViews from "@/components/WindowViews";
+import LeftMenuBar from "@/components/admin/LeftMenuBar";
+import WindowViews from "@/components/admin/WindowViews";
 
 export default {
   name: "MainComponent",
@@ -32,6 +32,7 @@ export default {
           isOpen:false,
           //菜单选项
           items:[
+              //path 对应 router 路径
             {title:'个人资料',path:'test'},
             {title:'账号安全',path:'账号安全'},
             {title:'黑名单管理',path:'黑名单管理'},

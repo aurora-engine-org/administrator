@@ -2,7 +2,7 @@
   <div class="left-menu">
     <div class="left-menu-tile" @click="openHome">
       <div class="left-menu-tile-icon">
-          <img src="../../public/ui/home-fill.png" class="home-icon">
+          <img src="../../../public/ui/home-fill.png" class="home-icon">
       </div>
       <div class="left-menu-tile-text">
         {{title}}
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import TreeMenu from "@/components/TreeMenu";
+import TreeMenu from "@/components/admin/TreeMenu";
 
 export default {
   name: "LeftMenuBar",

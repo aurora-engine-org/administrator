@@ -5,7 +5,7 @@
       <div class="left-img-box">
 
         <div class="left-img">
-          <img class="limg" :src="require('../../public/imgs/'+this.pictures[leftIndex])" @click="checkLeft">
+          <img class="limg" :src="require('../../../public/imgs/'+this.pictures[leftIndex])" @click="checkLeft">
         </div>
 
       </div>
@@ -15,7 +15,7 @@
       <div class="center-img-box">
 
         <div class="center-img">
-            <img class="cimg" :src="require('../../public/imgs/'+this.pictures[centerIndex])">
+            <img class="cimg" :src="require('../../../public/imgs/'+this.pictures[centerIndex])">
         </div>
 
       </div>
@@ -25,7 +25,7 @@
       <div class="right-img-box">
 
         <div class="right-img">
-          <img class="rimg" :src="require('../../public/imgs/'+this.pictures[rightIndex])" @click="checkRight">
+          <img class="rimg" :src="require('../../../public/imgs/'+this.pictures[rightIndex])" @click="checkRight">
         </div>
 
       </div>
