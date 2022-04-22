@@ -5,11 +5,11 @@ import (
 	"github.com/aurora-go/aurora"
 )
 
-func Control(a *aurora.Aurora) {
+func Control(a aurora.Web) {
 
 	vue := a.Group("/")
 	{
-		vue.GET("/", views.Vue)
+		vue.Get("/", views.Vue)
 	}
 
 }

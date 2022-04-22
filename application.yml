@@ -3,5 +3,4 @@ aurora:
     name: administrator
   server:
     port: 8000
-  resource:
-    static: static
+  resource: static
