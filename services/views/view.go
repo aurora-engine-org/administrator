@@ -1,7 +1,5 @@
 package views
 
-import "github.com/aurora-go/aurora"
-
-func Vue(request aurora.Request) interface{} {
+func Vue() interface{} {
 	return "index.html"
 }
