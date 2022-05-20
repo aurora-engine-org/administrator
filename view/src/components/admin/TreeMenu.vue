@@ -3,7 +3,7 @@
   基于 TreeMenu 嵌套方式实现的菜单树
 -->
   <div class="menu" v-for="(menu,index) in menus" :key="menu" @click="close(index)">
-    <!--  当前菜单名  -->
+    <!-- 选项标题 -->
     <div :class="menu.isOpen?'menu-title-open':'menu-title'" @click="menu.isOpen=!menu.isOpen">
       <div class="menu-title-box">
         <div :class="{'menu-title-arrow':!menu.isOpen,'menu-title-arrowTrans':menu.isOpen}">
@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 选项列表 -->
     <div class="item-background" v-if="menu.isOpen">
       <!--  当前菜单选项    -->
       <div class="item-box">
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-
+    <!-- 子选项   -->
     <div class="child-menu"  v-if="menu.isOpen">
       <TreeMenu :menus="menu.child"></TreeMenu>
     </div>
@@ -127,12 +127,9 @@ export default {
   height: 40px;
   user-select: none;
 }
+
 .item{
   height: 40px;
-
-}
-.item-title:hover{
-  color: blue;
 }
 .item-title{
   margin-left: 40px;

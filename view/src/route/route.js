@@ -4,7 +4,7 @@ const routes = [
     {
         path:'/',
         name:'index',
-        component:()=>import('@/views/page/IndexView')
+        component:()=>import('@/views/index/IndexView')
     },
     {
         path:'/admin',

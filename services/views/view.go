@@ -1,5 +1,5 @@
 package views
 
-func Vue() interface{} {
-	return "index.html"
+func Vue() string {
+	return "/test/index.html"
 }
