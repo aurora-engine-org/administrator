@@ -5,7 +5,7 @@ import (
 	"github.com/aurora-go/aurora"
 )
 
-func Control(a aurora.Web) {
+func Control(a *aurora.Aurora) {
 
 	vue := a.Group("/")
 	{
