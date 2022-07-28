@@ -5,13 +5,17 @@
   <div class="menu" v-for="(menu,index) in menus" :key="menu" @click="close(index)">
     <!-- 选项标题 -->
     <div :class="menu.isOpen?'menu-title-open':'menu-title'" @click="menu.isOpen=!menu.isOpen">
+
       <div class="menu-title-box">
+
         <div :class="{'menu-title-arrow':!menu.isOpen,'menu-title-arrowTrans':menu.isOpen}">
           <img class="title-arrow" src="../../../public/ui/arrow-right.png">
         </div>
+
         <div class="title-text" >
           {{menu.title}}
         </div>
+
       </div>
     </div>
     <!-- 选项列表 -->
@@ -81,15 +85,16 @@ export default {
 
 <style scoped>
 .menu-title:hover{
-  background-color: #72777b;
+  background-color: #18c9ec;
   cursor: pointer;
 }
 .menu-title-open:hover{
-  background-color: #72777b;
+  background-color: #18c9ec;
   cursor: pointer;
 }
 .menu-title-open{
   border-bottom-style: solid;
+  border-bottom-color: white;
 }
 .menu-title-box{
   height: 40px;
@@ -97,7 +102,7 @@ export default {
   flex-direction: row;
 }
 .item:hover{
-  background-color: #72777b;
+  background-color: #18c9ec;
   cursor: pointer;
 }
 .title-text{

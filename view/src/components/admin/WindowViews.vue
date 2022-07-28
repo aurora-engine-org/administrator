@@ -8,6 +8,7 @@
 <!--    主视图管理-->
     <ViewsComponents ></ViewsComponents>
   </div>
+
 </template>
 
 <script>

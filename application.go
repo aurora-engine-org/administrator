@@ -1,17 +1,13 @@
 package main
 
 import (
-	"administrator/controllers"
-	"github.com/aurora-go/aurora"
-	"log"
+	"administrator/controllers/register"
+	"administrator/load"
+	"gitee.com/aurora-engine/aurora"
 )
 
 func main() {
-	web := aurora.Web
-	controllers.Control(web)
-	err := aurora.Run(web)
-	if err != nil {
-		log.Println(err.Error())
-		return
-	}
+	a := load.Server()
+	register.Register(a)
+	aurora.Run(a)
 }

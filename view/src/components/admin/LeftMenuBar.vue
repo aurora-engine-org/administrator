@@ -54,7 +54,7 @@ export default {
 
 .left-menu{
   width: 15vw;
-  background-color: #dbd5d5;
+  background-color: rgba(80, 201, 231, 0.98);
   overflow: auto;
 }
 
@@ -64,6 +64,7 @@ export default {
   flex-direction: row;
   border-bottom-style: solid;
   border-bottom-width: 2px;
+  border-bottom-color: white;
 }
 
 .left-menu-tile-icon{
