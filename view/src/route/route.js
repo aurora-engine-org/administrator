@@ -12,21 +12,23 @@ const routes = [
         redirect:'/admin/home',
         component:()=>import("@/views/admin/AdminView"),
         children:[
-            {
-                path:'test',
-                name:'test',
-                component:()=>import("@/views/TestView")
-            },
             //管理页面 首页
             {
                 path:'home',
                 name:'admin-home',
                 component:()=>import('@/views/admin/page/AdminHome')
             },
+            // 用户首页
             {
-                path:'404',
-                name: 'not-found',
-                component:()=>import('@/views/notfound/NotFound')
+                path:'user',
+                name:'user',
+                component:()=>import('@/views/admin/page/UserCenterPage')
+            },
+            // 我的信息
+            {
+                path:'userinfo',
+                name:'userinfo',
+                component:()=>import('@/views/admin/page/UserInfoPage')
             },
             {
                 path:'article',

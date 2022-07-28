@@ -1,5 +1,6 @@
 <template>
 <div class="admin-home">
+<!-- 管理后台 默认首页 -->
   Welcome to administrator
 </div>
 </template>

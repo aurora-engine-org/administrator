@@ -41,8 +41,8 @@ const menus= [
     //菜单选项
     items:[
       //path 对应 router 路径
-      {title:'首页',path:'test'},
-      {title:'我的信息',path:'账号安全'},
+      {title:'首页',path:'user'},
+      {title:'我的信息',path:'userinfo'},
       {title:'账号安全',path:'黑名单管理'},
     ],
     //子菜单
