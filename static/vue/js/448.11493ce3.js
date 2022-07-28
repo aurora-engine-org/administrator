@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkview"]=self["webpackChunkview"]||[]).push([[448],{3448:function(e,n,t){t.r(n),t.d(n,{default:function(){return c}});var r=t(3396);function u(e,n,t,u,i,s){return(0,r.wg)(),(0,r.iD)("div",null," test view ")}var i={name:"TestView"},s=t(89);const a=(0,s.Z)(i,[["render",u]]);var c=a}}]);
+//# sourceMappingURL=448.11493ce3.js.map

@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkview"]=self["webpackChunkview"]||[]).push([[562],{6562:function(e,n,t){t.r(n),t.d(n,{default:function(){return u}});var a=t(3396);const r={class:"admin-home"};function c(e,n,t,c,i,o){return(0,a.wg)(),(0,a.iD)("div",r," Welcome to administrator ")}var i={name:"AdminHome"},o=t(89);const s=(0,o.Z)(i,[["render",c],["__scopeId","data-v-4b97c2e6"]]);var u=s}}]);
+//# sourceMappingURL=562.295eb0ad.js.map
