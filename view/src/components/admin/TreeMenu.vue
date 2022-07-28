@@ -85,7 +85,7 @@ export default {
 
 <style scoped>
 .menu-title:hover{
-  background-color: #18c9ec;
+  background-color: #0baecb;
   cursor: pointer;
 }
 .menu-title-open:hover{

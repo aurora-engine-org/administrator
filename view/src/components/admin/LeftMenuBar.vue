@@ -54,7 +54,7 @@ export default {
 
 .left-menu{
   width: 15vw;
-  background-color: rgba(80, 201, 231, 0.98);
+  background-color: rgba(11, 174, 203, 0.99);
   overflow: auto;
 }
 
