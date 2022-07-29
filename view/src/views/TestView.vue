@@ -1,7 +1,7 @@
 <template>
-<div>
-  test view
-</div>
+  <div>
+    test view
+  </div>
 </template>
 
 <script>

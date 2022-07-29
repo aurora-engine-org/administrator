@@ -4,9 +4,9 @@ const routes = [
     {
         path:'/',
         name:'index',
-        component:()=>import('@/views/index/IndexView')
+        component:()=>import('@/views/TestView')
     },
-    {
+   /* {
         path:'/admin',
         name:'admin',
         redirect:'/admin/home',
@@ -47,7 +47,7 @@ const routes = [
                 component:()=>import('@/views/notfound/NotFound')
             },
         ],
-    }
+    }*/
 ]
 
 const Route= createRouter({

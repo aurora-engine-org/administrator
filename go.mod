@@ -2,10 +2,7 @@ module administrator
 
 go 1.18
 
-require (
-	gitee.com/aurora-engine/aurora v1.0.5
-	github.com/aurora-go/aurora v0.5.0
-)
+require gitee.com/aurora-engine/aurora v1.0.5
 
 require (
 	github.com/fsnotify/fsnotify v1.5.1 // indirect

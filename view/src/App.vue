@@ -2,12 +2,11 @@
   <router-view></router-view>
 </template>
 <script>
-import HeaderComponent from "@/components/admin/HeaderComponent";
 
 export default {
   name: 'App',
   components: {
-    HeaderComponent,
+
   },
   created() {
 
